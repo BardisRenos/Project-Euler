@@ -13,7 +13,7 @@ class Problem6:
         return square_of_sum-sum_of_squares
 
 import unittest
-class test_Problem1(unittest.TestCase):
+class test_Problem6(unittest.TestCase):
     def test_result(self):
         A = Problem6()
         self.assertEqual(A.sumSquareDifference(100), 25164150)
