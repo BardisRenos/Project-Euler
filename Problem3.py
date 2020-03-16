@@ -1,18 +1,32 @@
 # Largest prime factor
 # Problem 3
+# The prime factors of 13195 are 5, 7, 13 and 29.
+# What is the largest prime factor of the number 600851475143 ?
+
 class Problem3:
     def largestPrimeFactor(self, num, extremum = False):
         list_of_facotrs = []
-
-        for i in range(3, num+1, 2):
-            if(num<i):
-                break
-            while num%i == 0:
-                print(i, num)
-                list_of_facotrs.append(i)
-                num /= i
-        
+        if(type(num) is str):
+            return False
+        if(num<3):
+            return False
+        else:
+            for i in range(3, num+1, 2):
+                if(self.is_prime_num(i)):
+                    while num%i == 0:
+                        list_of_facotrs.append(i)
+                        num /= i
         return list_of_facotrs[-1]
+
+    def is_prime_num(self, num):
+        if (num <= 1):
+            return False
+        if (num%2 == 0):
+            return False
+        for i in range(3, int(num**0.5)+1, 2):
+            if num % i == 0:
+                return False
+        return True
 
 #Unit testing 
 import unittest
@@ -37,3 +51,4 @@ class test_Problem3(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
