@@ -31,7 +31,7 @@ class Problem3:
 #Unit testing 
 import unittest
 
-class test_Problem2(unittest.TestCase):
+class test_Problem3(unittest.TestCase):
 
     def test_check_type_number(self):
         A = Problem3()
@@ -42,7 +42,7 @@ class test_Problem2(unittest.TestCase):
         A = Problem3()
         #Test of the given value
         self.assertFalse(A.largestPrimeFactor(2))
-    
+
     def test_compare_result(self):
         A = Problem3()
         #Test the final result
@@ -51,3 +51,4 @@ class test_Problem2(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
