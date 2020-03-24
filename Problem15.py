@@ -6,6 +6,7 @@
 # How many such routes are there through a 20×20 grid?
 
 class Problem15:
+    
     def latticePaths(self, num):
         if(type(num) is str):
             return False
